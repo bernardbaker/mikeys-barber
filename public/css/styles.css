@@ -79,7 +79,8 @@ nav div {
 
 .name,
 .contact,
-.location {
+.location,
+.hours {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -113,7 +114,9 @@ nav div {
   color: rgba(255,255,255,0.9);
 }
 
-.break {
+.hours {
+  -ms-flex: 1 1 100%;
+      flex: 1 1 100%;
   display: none;
 }
 
@@ -243,6 +246,13 @@ footer p {
         order: 3;
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+  }
+
+  .hours {
+    -ms-flex-order: 4;
+        order: 4;
+    display: -ms-flexbox;
+    display: flex;
   }
 
 
