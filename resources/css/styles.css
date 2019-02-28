@@ -39,6 +39,9 @@ nav {
   align-content: center;
   position: relative;
   font-family: 'Monoton', cursive;
+
+  position: relative;
+  z-index: 2;
 }
 
 nav div {
@@ -62,8 +65,16 @@ nav div {
   margin-left: 10px;
 }
 
+.contact a:hover {
+  color: rgba(255,255,255,0.9);
+}
+
 .location {
   margin-right: 10px;
+}
+
+.location a:hover {
+  color: rgba(255,255,255,0.9);
 }
 
 .pictures {
@@ -118,13 +129,13 @@ footer p {
   }
   
   .contact {
-    flex: 1 1 50%;
+    flex: 1 1 auto;
     order: 2;
     margin-left: 0;
   }
   
   .location {
-    flex: 1 1 50%;
+    flex: 1 1 auto;
     order: 3;
     margin-right: 0;
   }
