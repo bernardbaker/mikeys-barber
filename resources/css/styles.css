@@ -27,8 +27,13 @@ a {
   display: flex;
   flex-direction: column;
   align-self: center;
+}
 
+.no-select {
+  -webkit-touch-callout: none;
   -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
