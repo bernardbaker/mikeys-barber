@@ -24,11 +24,32 @@ body {
 a {
   color:white;
   text-decoration: none;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-item-align: center;
+      align-self: center;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 
 h1 {
   font-weight: 100;
+}
+
+header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  height: 100vh;
 }
 
 nav {
@@ -38,14 +59,9 @@ nav {
       justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  height: 100vh;
   -ms-flex-line-pack: center;
       align-content: center;
-  position: relative;
   font-family: 'Monoton', cursive;
-
-  position: relative;
-  z-index: 2;
 }
 
 nav div {
@@ -70,6 +86,8 @@ nav div {
 
 .contact {
   margin-left: 10px;
+  position: relative;
+  z-index: 2;
 }
 
 .contact a:hover {
@@ -78,6 +96,8 @@ nav div {
 
 .location {
   margin-right: 10px;
+  position: relative;
+  z-index: 2;
 }
 
 .location a:hover {
@@ -106,6 +126,11 @@ nav div {
   margin: 10px;
   -ms-flex: 1 1 auto;
       flex: 1 1 auto;
+  opacity: 0.5;
+}
+
+.picture:hover {
+  opacity: 1;
 }
 
 
@@ -115,6 +140,11 @@ footer {
   bottom: 0;
   right: 0;
   border-top-left-radius: 10px;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 footer p {
@@ -165,10 +195,15 @@ footer p {
 
 @media all and (max-width:500px) {
 
+  header {
+    height: 100vh;
+  }
+
+
   nav {
     -ms-flex-line-pack: start;
         align-content: flex-start;
-    height: 100vh;
+    height: auto;
   }
 
   
