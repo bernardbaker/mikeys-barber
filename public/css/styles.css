@@ -168,7 +168,7 @@ footer p {
   nav {
     -ms-flex-line-pack: start;
         align-content: flex-start;
-    height: 450px;
+    height: 100vh;
   }
 
   
