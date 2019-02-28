@@ -197,6 +197,7 @@ footer p {
     animation-name: pulse;
     animation-duration: 0.3s;
     animation-iteration-count: infinite;
+    line-height: 2rem;
   }
   
   .contact {
