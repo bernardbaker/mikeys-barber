@@ -98,6 +98,10 @@ nav div {
   color: rgba(255,255,255,0.9);
 }
 
+.break {
+  display: none;
+}
+
 .pictures {
   position: absolute;
   top: 0;
@@ -202,6 +206,11 @@ footer p {
   .location {
     order: 3;
     flex-basis: 100%;
+  }
+
+
+  .break {
+    display: block;
   }
   
   
