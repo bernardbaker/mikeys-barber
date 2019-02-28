@@ -175,6 +175,7 @@ footer p {
 
   header {
     height: 100vh;
+    justify-content: flex-start;
   }
 
 
