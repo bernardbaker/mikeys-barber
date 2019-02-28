@@ -170,6 +170,7 @@ footer p {
   
   .pictures {
     position: relative;
+    top: 0px;
   }
 
   .picture {
