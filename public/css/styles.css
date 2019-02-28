@@ -210,8 +210,8 @@ footer p {
 
   header {
     height: 100vh;
-    -ms-flex-pack: start;
-        justify-content: flex-start;
+    -ms-flex-pack: center;
+        justify-content: center;
   }
 
 
