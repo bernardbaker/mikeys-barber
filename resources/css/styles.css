@@ -26,15 +26,23 @@ a {
   text-decoration: none;
 }
 
+
+h1 {
+  font-weight: 100;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap
+  flex-wrap: wrap;
+  height: 100vh;
+  align-content: center;
+  position: relative;
+  font-family: 'Monoton', cursive;
 }
 
 nav div {
-  border: 1px solid white;
-  padding: 10px;
+  padding: 10px;  
 }
 
 .name,
@@ -42,13 +50,62 @@ nav div {
 .location {
   display: flex;
   flex-direction: column;
-  justify-content: baseline;
-
+  justify-content: center;
   text-align: center;
 }
 
+.name {
+  font-size: xx-large;
+}
 
-@media all and (max-width:1000px) {
+.contact {
+  margin-left: 10px;
+}
+
+.location {
+  margin-right: 10px;
+}
+
+.pictures {
+  position: absolute;
+  top: 0;
+}
+
+.picture-wrapper {
+  display: flex;
+  height: 100vh;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100vw;
+}
+
+.picture {
+  background-color: rgba(255, 255, 255, 0.2);
+  width: calc(33.33% - 20px);
+  margin: 10px;
+  flex: 1 1 auto;
+}
+
+
+footer {
+  position: fixed;
+  background-color: rgba(0,0,0,0.7);
+  bottom: 0;
+  right: 0;
+  border-top-left-radius: 10px;
+}
+
+footer p {
+  display: flex;
+  justify-content: center;
+  font-size: x-small;
+  padding-top: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+@media all and (max-width:1212px) {
   
   nav {
     justify-content: center;
@@ -63,27 +120,65 @@ nav div {
   .contact {
     flex: 1 1 50%;
     order: 2;
+    margin-left: 0;
   }
   
   .location {
     flex: 1 1 50%;
     order: 3;
+    margin-right: 0;
   }
 
 }
 
 @media all and (max-width:500px) {
 
+  nav {
+    align-content: flex-start;
+    height: 450px;
+  }
+
+  
   .name {
     order: 1;
+    animation-name: pulse;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
   }
   
   .contact {
     order: 2;
+    flex-basis: 100%;
   }
   
   .location {
     order: 3;
+    flex-basis: 100%;
   }
+  
+  
+  .pictures {
+    position: relative;
+  }
+
+  .picture {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: calc(100% - 20px);
+    margin: 10px;
+    flex-direction: column;
+    height: 200px;
+    flex: 1 1 auto;
+  }
+
+  @keyframes pulse {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1); }
+    50% {
+      -webkit-transform: scale(1.003);
+              transform: scale(1.003); }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1); } }
 
 }

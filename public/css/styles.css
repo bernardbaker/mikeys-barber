@@ -26,18 +26,27 @@ a {
   text-decoration: none;
 }
 
+
+h1 {
+  font-weight: 100;
+}
+
 nav {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap
+      flex-wrap: wrap;
+  height: 100vh;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  position: relative;
+  font-family: 'Monoton', cursive;
 }
 
 nav div {
-  border: 1px solid white;
-  padding: 10px;
+  padding: 10px;  
 }
 
 .name,
@@ -47,14 +56,69 @@ nav div {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  -ms-flex-pack: baseline;
-      justify-content: baseline;
-
+  -ms-flex-pack: center;
+      justify-content: center;
   text-align: center;
 }
 
+.name {
+  font-size: xx-large;
+}
 
-@media all and (max-width:1000px) {
+.contact {
+  margin-left: 10px;
+}
+
+.location {
+  margin-right: 10px;
+}
+
+.pictures {
+  position: absolute;
+  top: 0;
+}
+
+.picture-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100vw;
+}
+
+.picture {
+  background-color: rgba(255, 255, 255, 0.2);
+  width: calc(33.33% - 20px);
+  margin: 10px;
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+}
+
+
+footer {
+  position: fixed;
+  background-color: rgba(0,0,0,0.7);
+  bottom: 0;
+  right: 0;
+  border-top-left-radius: 10px;
+}
+
+footer p {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  font-size: x-small;
+  padding-top: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+@media all and (max-width:1212px) {
   
   nav {
     -ms-flex-pack: center;
@@ -75,6 +139,7 @@ nav div {
         flex: 1 1 50%;
     -ms-flex-order: 2;
         order: 2;
+    margin-left: 0;
   }
   
   .location {
@@ -82,25 +147,64 @@ nav div {
         flex: 1 1 50%;
     -ms-flex-order: 3;
         order: 3;
+    margin-right: 0;
   }
 
 }
 
 @media all and (max-width:500px) {
 
+  nav {
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    height: 450px;
+  }
+
+  
   .name {
     -ms-flex-order: 1;
         order: 1;
+    animation-name: pulse;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
   }
   
   .contact {
     -ms-flex-order: 2;
         order: 2;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
   
   .location {
     -ms-flex-order: 3;
         order: 3;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
+  
+  
+  .pictures {
+    position: relative;
+  }
+
+  .picture {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: calc(100% - 20px);
+    margin: 10px;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    height: 200px;
+    -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1); }
+    50% {
+      transform: scale(1.003); }
+    100% {
+      transform: scale(1); } }
 
 }
