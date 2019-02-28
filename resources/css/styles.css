@@ -1,0 +1,89 @@
+/* Some CSS Setup - nothing to do with flexbox */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: medium;
+  color: white;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  font-size: 1.5rem;
+  background: linear-gradient(260deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 100%),
+              linear-gradient(0deg, rgba(0,0,0,0.2) 0%, rgba(0,0,100,0.2) 50%, rgba(0,0,0,0.2) 100%),
+              linear-gradient(90deg, rgba(25,0,0,0.9) 0%, rgba(0,0,0,0.9) 100%);
+}
+
+a {
+  color:white;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap
+}
+
+nav div {
+  border: 1px solid white;
+  padding: 10px;
+}
+
+.name,
+.contact,
+.location {
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+
+  text-align: center;
+}
+
+
+@media all and (max-width:1000px) {
+  
+  nav {
+    justify-content: center;
+  }
+
+  .name {
+    flex: 1 1 100%;
+    order: 1;
+    align-self: center;
+  }
+  
+  .contact {
+    flex: 1 1 50%;
+    order: 2;
+  }
+  
+  .location {
+    flex: 1 1 50%;
+    order: 3;
+  }
+
+}
+
+@media all and (max-width:500px) {
+
+  .name {
+    order: 1;
+  }
+  
+  .contact {
+    order: 2;
+  }
+  
+  .location {
+    order: 3;
+  }
+
+}
