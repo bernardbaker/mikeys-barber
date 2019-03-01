@@ -52,6 +52,8 @@ header {
   flex-direction: column;
   justify-content: center;
   height: 100vh;
+  position: relative;
+  z-index: 2;
 }
 
 nav {
@@ -108,6 +110,7 @@ nav div {
 .pictures {
   position: absolute;
   top: 0;
+  z-index: 0;
 }
 
 .picture-wrapper {
@@ -123,10 +126,6 @@ nav div {
   width: calc(33.33% - 20px);
   margin: 10px;
   flex: 1 1 auto;
-  opacity: 0.5;
-}
-
-.picture:hover {
   opacity: 1;
 }
 
