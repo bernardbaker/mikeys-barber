@@ -212,13 +212,8 @@ footer p {
   }
 
   .hours {
-    order: 4;
+    order: 2;
     display: flex;
-  }
-
-
-  .break {
-    display: block;
   }
   
   
