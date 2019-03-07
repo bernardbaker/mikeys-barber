@@ -8,17 +8,18 @@ html {
 }
 
 html {
-  font-size: medium;
+  font-size: small;
   color: white;
 }
 
 body {
   font-family: sans-serif;
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 2rem;
   background: linear-gradient(260deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 100%),
               linear-gradient(0deg, rgba(0,0,0,0.2) 0%, rgba(0,0,100,0.2) 50%, rgba(0,0,0,0.2) 100%),
               linear-gradient(90deg, rgba(25,0,0,0.9) 0%, rgba(0,0,0,0.9) 100%);
+  overflow-y: scroll; 
 }
 
 a {
@@ -45,6 +46,7 @@ h1 {
   font-weight: 100;
   text-shadow: 2px 2px #ff0000, -2px -2px#0000ff;
   letter-spacing: 0.005em;
+  font-size: 4rem;
 }
 
 header {
@@ -65,7 +67,7 @@ nav {
 }
 
 nav div {
-  padding: 10px;  
+  padding: 0.1rem;  
 }
 
 .name,
@@ -123,10 +125,14 @@ nav div {
 
 .picture {
   background-color: rgba(255, 255, 255, 0.2);
-  width: calc(33.33% - 20px);
-  margin: 10px;
+  width: calc(33.33% - 1rem);
+  margin: 0.5rem;
   flex: 1 1 auto;
   opacity: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transform-origin: 50% 50%;
 }
 
 
@@ -198,7 +204,7 @@ footer p {
     animation-name: pulse;
     animation-duration: 0.3s;
     animation-iteration-count: infinite;
-    line-height: 2rem;
+    line-height: 2.6rem;
   }
   
   .contact {
@@ -214,6 +220,7 @@ footer p {
   .hours {
     order: 2;
     display: flex;
+    line-height: 2.6rem;
   }
   
   
