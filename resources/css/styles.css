@@ -187,6 +187,11 @@ footer p {
 
 @media all and (max-width:500px) {
 
+  body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
   header {
     height: 100vh;
     justify-content: center;
@@ -222,7 +227,7 @@ footer p {
     display: flex;
     line-height: 2.6rem;
   }
-  
+
   
   .pictures {
     position: relative;
